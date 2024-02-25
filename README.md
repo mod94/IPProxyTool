@@ -1,13 +1,12 @@
 # IPProxyTool
-使用 scrapy 爬虫抓取代理网站，获取大量的免费代理 ip。过滤出所有可用的 ip，存入数据库以备使用。
-可以访问我的个人站点，查看我的更多有趣项目 [awolfly9](http://awolfly9.com/)
+Используйте Scrapy Cracker для сканирования прокси-сайтов и получения большого количества бесплатных IP-адресов прокси. Отфильтруйте все доступные IP-адреса и сохраните их в базе данных для дальнейшего использования. Вы можете ознакомиться с другими моими интересными проектами, посетив мой личный сайт awolfly9.
 
-感谢 [youngjeff](https://github.com/youngjeff) 和我一起维护该项目
+Спасибо YoungJeff за поддержку этого проекта вместе со мной.
 
-## 运行环境
-安装 python3  and mysql 数据库
+## Рабочая среда
+Установите базу данных Python3 и MySQL.
 
-cryptography模块安装环境:
+среда установки модуля шифрования:
 ```
 sudo yum install gcc libffi-devel python-devel openssl-devel
 ```
@@ -19,19 +18,19 @@ $ pip install -r requirements.txt
 
 
 
-## 下载使用
-将项目克隆到本地
+## Загрузите и используйте
+Клонировать проект локально
 
 ```
 $ git clone https://github.com/awolfly9/IPProxyTool.git
 ```
 
-进入工程目录
+Введите каталог проекта
 
 ```
 $ cd IPProxyTool
 ```
-修改 mysql 数据库配置 [config.py](https://github.com/awolfly9/IPProxyTool/blob/master/config.py) 中 database_config 的用户名和密码为数据库的用户名和密码
+Измените имя пользователя и пароль базы данных_config в конфигурации базы данных mysql [config.py](https://github.com/awolfly9/IPProxyTool/blob/master/config.py) 中 database_config на имя пользователя и пароль базы данных.
 
 ```
 $ vim config.py
