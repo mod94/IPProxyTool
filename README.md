@@ -56,27 +56,27 @@ $ mysql> source '/你的项目目录/db.sql'
 ```
 
 
-运行启动脚本 ipproxytool.py 也可以分别运行抓取，验证，服务器接口脚本，运行方法参考项目说明
+Запустите сценарий запуска ipproxytool.py. Вы также можете запустить сценарии сканирования, проверки и интерфейса сервера отдельно. Метод запуска см. в описании проекта.
 
 ```
 $ python ipproxytool.py 
 ```
 
-新增异步验证方式，运行方法如下
+Добавлен асинхронный метод проверки, метод запуска выглядит следующим образом.
 
 ```
 $ python ipproxytool.py async
 ```
 <br>
 
-## 项目说明
-#### 抓取代理网站
-所有抓取代理网站的代码都在 [proxy](https://github.com/awolfly9/IPProxyTool/tree/master/ipproxytool/spiders/proxy)<br/>
-##### 扩展抓取其他的代理网站
-1.在 proxy 目录下新建脚本并继承自 BaseSpider <br/>
-2.设置 name、urls、headers<br/>
-3.重写 parse_page 方法，提取代理数据<br/>
-4.将数据存入数据库 具体可以参考 [ip181](https://github.com/awolfly9/IPProxyTool/blob/master/ipproxytool/spiders/proxy/ip181.py)                 [kuaidaili](https://github.com/awolfly9/IPProxyTool/blob/master/ipproxytool/spiders/proxy/kuaidaili.py)<br/>
+## инструкция по проекту
+#### Сканировать прокси-сайт
+Весь код для сканирования прокси-сайтов находится в [proxy](https://github.com/awolfly9/IPProxyTool/tree/master/ipproxytool/spiders/proxy)<br/>
+##### Разверните, чтобы сканировать другие прокси-сайты
+1.Создайте новый скрипт в каталоге прокси и наследуйте его от BaseSpider <br/>
+2.настраивать name、urls、headers<br/>
+3.Переопределить метод parse_page для извлечения данных прокси.<br/>
+4.Хранить данные в базе данных.Подробнее см. [ip181](https://github.com/awolfly9/IPProxyTool/blob/master/ipproxytool/spiders/proxy/ip181.py)                 [kuaidaili](https://github.com/awolfly9/IPProxyTool/blob/master/ipproxytool/spiders/proxy/kuaidaili.py)<br/>
 5.如果需要抓取特别复杂的代理网站，可以参考[peuland](https://github.com/awolfly9/IPProxyTool/blob/master/ipproxytool/spiders/proxy/peuland.py)<br/>
 
 ##### 修改 run_crawl_proxy.py 导入抓取库，添加到抓取队列
